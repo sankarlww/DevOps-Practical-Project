@@ -109,5 +109,13 @@ kubectl apply -f mongodb-service.yaml
 
 ```
 
-## Deploy the Application
+## Bonus Points
+### Create a playbook to install NTP and any Kubernetes dependencies:
+This is a file in [Repository Name](ansible/install-ntp.yml) repository.
 
+```bash
+ansible-playbook -i inventory playbook.yml
+
+```
+
+## next 
