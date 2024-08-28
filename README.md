@@ -32,3 +32,32 @@ This project demonstrates a practical implementation of DevOps concepts using Ku
 2. **Verify Minikube Installation**:
    ```bash
    minikube version
+
+### 2. Install kubectl
+
+1. **Download kubectl:**:
+    ```bash
+   curl -LO "https://dl.k8s.io/release/v1.21.0/bin/windows/amd64/kubectl.exe"
+
+2. **Move kubectl to PATH:**:
+   ```bash
+   move kubectl.exe C:\Windows\System32\
+
+3. **Verify kubectl Installation:**:
+
+   ```bash
+   kubectl version --client
+
+### 3. Start Minikube
+
+1. **Start Minikube:**:
+    ```bash
+   minikube start --driver=virtualbox
+
+2. **Verify Minikube Status:**:
+   ```bash
+   minikube status
+
+## Deploy MongoDB
+
+
