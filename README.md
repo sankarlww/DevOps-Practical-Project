@@ -2,25 +2,33 @@
 
 ## Overview
 
-This project demonstrates a complete DevOps pipeline, including Dockerizing an application, deploying it to Kubernetes, and configuring infrastructure using Terraform and Helm. The setup includes MongoDB, Kubernetes cluster setup, and application deployment.
+This project demonstrates a practical implementation of DevOps concepts using Kubernetes, Docker, and Helm. It involves deploying an application to a local Kubernetes cluster using Minikube and configuring MongoDB.
+
+## Project Structure
+
+- **`devops-practical-chart/`**: Helm chart for deploying the application.
+- **`terraform/`**: (Optional) Terraform configurations if needed for local resources.
+- **`docker/`**: Dockerfile for building the application image.
+- **`scripts/`**: Scripts for setting up Kubernetes or other environments.
+- **`ansible/`**: (Optional) Ansible playbooks for configuration management.
+- **`docs/`**: Documentation including setup guides and screenshots.
+- **`examples/`**: Example configuration files.
+- **`config/`**: Application configuration files.
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
+- **Minikube**: [Install Minikube](https://minikube.sigs.k8s.io/docs/start/)
+- **kubectl**: [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- **Helm**: [Install Helm](https://helm.sh/docs/intro/install/)
 
-- [Docker](https://docs.docker.com/get-docker/)
-- [Minikube](https://minikube.sigs.k8s.io/docs/start/)
-- [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-- [Helm](https://helm.sh/docs/intro/install/)
-- [Terraform](https://www.terraform.io/downloads)
-- [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-- [Packer](https://www.packer.io/downloads)
+## Setup
 
-## Setup Instructions
+### 1. Install Minikube
 
-### 1. Set Up Minikube
+1. **Download and Install Minikube**:
+   - Download the Minikube installer for Windows from the [Minikube releases page](https://github.com/kubernetes/minikube/releases).
+   - Run the installer and follow the setup instructions.
 
-1. **Install Minikube:**
+2. **Verify Minikube Installation**:
    ```bash
-   curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-   sudo install minikube-linux-amd64 /usr/local/bin/minikube
+   minikube version
