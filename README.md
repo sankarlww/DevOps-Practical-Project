@@ -109,6 +109,29 @@ kubectl apply -f mongodb-service.yaml
 
 ```
 
+### Terraform Files
+Here is the [Terraform File for this project](terraform)
+
+```bash
+mkdir terraform
+cd terraform
+
+```
+
+```bash
+terraform init
+terraform plan
+terraform apply
+terraform show
+```
+
+### Docker Result 
+Here is the [Docker File](docker/Dockerfile)
+**Screenshot of the running application with a new record added:**
+
+![Docker setup looks like below after setup completed](images/docker.PNG)
+
+
 ## Bonus Points
 ### Create a playbook to install NTP:
 
@@ -118,9 +141,3 @@ kubectl apply -f mongodb-service.yaml
 ansible-playbook -i inventory install-ntp.yml
 
 ```
-
-## Docker Result 
-Here is the [Docker File](docker/Dockerfile)
-**Screenshot of the running application with a new record added:**
-
-![Docker setup looks like below after setup completed](images/docker.PNG)
