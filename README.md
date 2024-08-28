@@ -120,6 +120,7 @@ ansible-playbook -i inventory install-ntp.yml
 ```
 
 ## Docker Final result 
+Docker File [[Repository Name](docker\Dockerfile)
 **Screenshot of the running application with a new record added:**
 
 ![Docker setup looks like below after setup completed](images/docker.PNG)
