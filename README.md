@@ -60,4 +60,54 @@ This project demonstrates a practical implementation of DevOps concepts using Ku
 
 ## Deploy MongoDB
 
+### 1. Create MongoDB Deployment
+
+Save the following as `mongodb-deployment.yaml`:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+        - name: mongodb
+          image: mongo:latest
+          ports:
+            - containerPort: 27017
+```
+Save the following as `mongodb-service.yaml`:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+spec:
+  selector:
+    app: mongodb
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017
+  type: ClusterIP
+
+```
+**Apply MongoDB Configuration:**:
+```bash
+kubectl apply -f mongodb-deployment.yaml
+kubectl apply -f mongodb-service.yaml
+
+```
+
+## Deploy the Application
 
