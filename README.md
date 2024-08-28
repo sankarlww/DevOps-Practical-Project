@@ -135,7 +135,7 @@ Here is the [Docker File](docker/Dockerfile)
 ## Bonus Points
 ### Create a playbook to install NTP:
 
-[ This is a the file to install NTP ](ansible/install-ntp.yml)
+This is the [playbook] to install NTP (ansible/install-ntp.yml)
 
 ```bash
 ansible-playbook -i inventory install-ntp.yml
