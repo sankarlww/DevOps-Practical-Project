@@ -139,12 +139,12 @@ Here is the [Docker File](docker/Dockerfile)
 
 ```bash
 ansible-playbook -i inventory install-ntp.yml
-
 ```
-###K8s
-**Security**:
-[To Store sensitive information securely, We can use this file] (k8s/security/secrets.yaml)
 
-**Scalability**:
-[Automatically scale the number of pods based on CPU or memory usage] (k8s/scalability/hpa.yaml)
+### K8s
+**Security:**
+To Store sensitive information securely, We can use this [file](k8s/security/secrets.yaml)
+
+**Scalability:**
+Automatically scale the number of pods based on CPU or memory usage [This is the File](k8s/scalability/hpa.yaml)
 
