@@ -112,15 +112,15 @@ kubectl apply -f mongodb-service.yaml
 ## Bonus Points
 ### Create a playbook to install NTP:
 
-This is a the file to install NTP [Repository Name](ansible/install-ntp.yml)
+[ This is a the file to install NTP ](ansible/install-ntp.yml)
 
 ```bash
 ansible-playbook -i inventory install-ntp.yml
 
 ```
 
-## Docker Final result 
-Docker File [[Repository Name](docker\Dockerfile)
+## Docker Result 
+Here is the [Docker File](docker/Dockerfile)
 **Screenshot of the running application with a new record added:**
 
 ![Docker setup looks like below after setup completed](images/docker.PNG)
